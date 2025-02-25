@@ -1,0 +1,7 @@
+<% if log_signed_in? %> 
+ <div> Welcome <%= current_log.email %> </div> 
+  <%= button_to "Sign out", destroy_log_session_path, method: :delete %> 
+<% else %>
+  <%= button_to "Sign in",  new_log_session_path %> 
+<% end %>
+<h1> Hello </h1>
